@@ -1,0 +1,124 @@
+﻿[
+  {
+    "Code": "1002",
+    "Message": "No Data Found!"
+  },
+
+  {
+    "Code": "1003",
+    "Message": "Something Went Wrong!"
+  },
+
+  {
+    "Code": "1004",
+    "Message": "An Error has occured!"
+  },
+
+  {
+    "Code": "2001",
+    "Message": "Login successfully!"
+  },
+  {
+    "Code": "2002",
+    "Message": "Invalid Username Or Password!"
+  },
+
+  {
+    "Code": "2003",
+    "Message": "You have use maximum attempts, your Account Has been locked. It will get unlock after {0} hours!"
+  },
+
+  {
+    "Code": "2004",
+    "Message": "Employee does not exist with this Employee No."
+  },
+  {
+    "Code": "2005",
+    "Message": "Details does not match with this Employee No"
+  },
+  {
+    "Code": "2006",
+    "Message": "Employee Exist!"
+  },
+  {
+    "Code": "2007",
+    "Message": "Employee Inactive!"
+  },
+  {
+    "Code": "2008",
+    "Message": "Employee Locked successfully"
+  },
+  {
+    "Code": "2009",
+    "Message": "Employee UnLocked successfully!"
+  },
+  {
+    "Code": "2010",
+    "Message": "Email already exist!"
+  },
+  {
+    "Code": "2011",
+    "Message": "Log Out Successfully!"
+  },
+  {
+    "Code": "2012",
+    "Message": "Password Reset Successfully!"
+  },
+  {
+    "Code": "2013",
+    "Message": "You can’t reuse your last {0} passwords!"
+  },
+  {
+    "Code": "2014",
+    "Message": "Password expired!"
+  },
+  {
+    "Code": "2015",
+    "Message": "Refresh token expired!"
+  },
+  {
+    "Code": "3001",
+    "Message": "Record(s) fetched successfully!"
+  },
+  {
+    "Code": "3002",
+    "Message": "Record(s) saved successfully!"
+  },
+  {
+    "Code": "3003",
+    "Message": "Action performed successfully!"
+  },
+  {
+    "Code": "3004",
+    "Message": "Record(s) updated successfully!"
+  },
+  {
+    "Code": "3005",
+    "Message": "Record(s) deleted successfully!"
+  },
+  {
+    "Code": "3006",
+    "Message": "File upload successfully!"
+  },
+  {
+    "Code": "3007",
+    "Message": "An Error has occured in file upload!"
+  },
+  {
+    "Code": "3008",
+    "Message": "File deleted successfully!"
+  },
+  {
+    "Code": "3009",
+    "Message": "An Error has occured in file delete!"
+  },
+  {
+    "Code": "1013",
+    "Message": "LoginForgotLog Saved!"
+  },
+  {
+    "Code": "1014",
+    "Message": "LoginForgotLog NOT Saved!"
+  }
+
+]
