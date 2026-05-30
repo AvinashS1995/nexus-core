@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NexusCore.Model;
-
+using NexusCore.Services.Interfaces;
 
 namespace NexusCore.Controllers
 {
@@ -20,10 +20,15 @@ namespace NexusCore.Controllers
         protected CommonResponseClass commonResponseClass;
         protected string _logedInEmpNo { get { return GetLogedInEmpNo(); } }
 
-        public BaseController(IConfiguration _config)
+        public BaseController(IConfiguration _config, ICommonService _commonService)
         {
             config = _config;
             commonResponseClass = new CommonResponseClass();
+        }
+
+        public BaseController(IConfiguration config)
+        {
+            this.config = config;
         }
 
         protected string ipAddress()

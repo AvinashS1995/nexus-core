@@ -100,30 +100,29 @@ namespace NexusCore.Repositories
         }
 
 
-        //public async Task<object> ExecuteScalarAsync(MySqlCommand command)
-        //{
-        //    object result = 0;
-        //    try
-        //    {
-        //        if (command.Connection.State != ConnectionState.Open)
-        //        {
-        //            command.Connection.Open();
-        //        }
-        //        result = await command.ExecuteScalarAsync();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        result = -1;
-        //        LogWriter lg = new LogWriter();
-        //        lg.LogWrite(ex.Message.ToString());
-        //        // LogWriter.LogWriteException(ex);
-        //    }
-        //    finally
-        //    {
-        //        _context.ConnectionClosed();
-        //    }
-        //    return result;
-        //}
+        public async Task<object> ExecuteScalarAsync(MySqlCommand command)
+        {
+            object result = 0;
+            try
+            {
+                if (command.Connection.State != ConnectionState.Open)
+                {
+                    command.Connection.Open();
+                }
+                result = await command.ExecuteScalarAsync();
+            }
+            catch (Exception ex)
+            {
+                result = -1;
+                Log.Information("Error ExecuteDataSetAsync (" + command.CommandText + ") :" + ex.Message);
+                // LogWriter.LogWriteException(ex);
+            }
+            finally
+            {
+                _context.ConnectionClosed();
+            }
+            return result;
+        }
 
         public async Task<object> ExecuteNonQueryAsync(MySqlCommand command)
         {

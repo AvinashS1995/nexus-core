@@ -3,6 +3,8 @@ namespace NexusCore.Common
 {
     public static class Constants
     {
+        public const string DateTimeFormat = "yyyyMMddHHmmss";
+
         public const string TempFolder = "TempFolder";
 
     }
@@ -37,11 +39,11 @@ namespace NexusCore.Common
         ActionPerformedSuccessfully = 3003,
         RecordUpdatedSuccessfully = 3004,
         RecordDeletedSuccessfully = 3005,
-        FileUploadSuccessfully = 3006,
-        ErrorHasOccuredInFileUpload = 3007,
-        FileDeletedSuccessfully = 3008,
-        ErrorHasOccuredInFileDelete = 3009,
 
+        FileUploadSuccessfully = 4001,
+        ErrorHasOccuredInFileUpload = 4002,
+        FileDeletedSuccessfully = 4003,
+        ErrorHasOccuredInFileDelete = 4004,
     }
 }
 

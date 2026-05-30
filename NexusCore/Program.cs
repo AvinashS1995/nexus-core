@@ -140,8 +140,8 @@ builder.Services.AddSwaggerGen(swagger =>
  * --------------------------------------------------*/
 builder.Services.AddTransient<ILoginRepository, LoginRepository>();
 builder.Services.AddTransient<ILoginService, LoginService>();
-//builder.Services.AddTransient<ICommonRepository, CommonRepository>();
-//builder.Services.AddTransient<ICommonService, CommonService>();
+builder.Services.AddTransient<ICommonRepository, CommonRepository>();
+builder.Services.AddTransient<ICommonService, CommonService>();
 // 🔥 REQUIRED for HttpContext
 builder.Services.AddHttpContextAccessor();
 

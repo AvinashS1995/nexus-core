@@ -16,6 +16,11 @@ namespace NexusCore.Model
             public string UploadFileType { get; set; }
             public int UploadFileSize { get; set; }
         }
+
+        public class INP_UploadFile
+        {
+            public IFormFile File { get; set; }
+        }
     }
 }
 
