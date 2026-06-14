@@ -10,14 +10,31 @@ namespace NexusCore.Common
         public readonly MySqlConnection _readReplicaConnection1;
         //public string _connectionString;
 
+        //public DbContext(string connectionString, string ReadReplicaConnection1)
+        //{
+        //    //_connectionString = connectionString;
+        //    _connection = new MySqlConnection(connectionString);
+        //    _readReplicaConnection1 = new MySqlConnection(ReadReplicaConnection1);
+        //    _connection.Open();
+        //    _readReplicaConnection1.Open();
+        //}
+
         public DbContext(string connectionString, string ReadReplicaConnection1)
         {
-            //_connectionString = connectionString;
+            if (string.IsNullOrWhiteSpace(connectionString))
+                throw new Exception("DefaultConnection is missing");
+
+            if (string.IsNullOrWhiteSpace(ReadReplicaConnection1))
+                throw new Exception("ReadConnection is missing");
+
+
             _connection = new MySqlConnection(connectionString);
             _readReplicaConnection1 = new MySqlConnection(ReadReplicaConnection1);
+
             _connection.Open();
             _readReplicaConnection1.Open();
         }
+
 
         public void ConnectionClosed()
         {

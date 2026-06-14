@@ -17,7 +17,7 @@ namespace NexusCore.Controllers
     {
         private readonly ICommonService commonService;
         private readonly ILogger<CommonController> _logger;
-        public CommonController(IConfiguration config, ICommonService _commonService, ILogger<CommonController> logger) : base(config, _commonService)
+        public CommonController(IConfiguration _config, ICommonService _commonService, ILogger<CommonController> logger) : base(_config)
         {
             _logger = logger;
             commonService = _commonService;

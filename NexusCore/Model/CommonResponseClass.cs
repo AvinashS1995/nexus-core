@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NexusCore.Common;
 using OfficeOpenXml;
+using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace NexusCore.Model
 {
@@ -63,6 +64,30 @@ namespace NexusCore.Model
 
             return responce;
         }
+
+        //public IActionResult ReturnResponce(ControllerBase controller,bool isSuccess, CommonResponse responseBody)
+        //{
+        //    if (isSuccess)
+        //    {
+        //        return controller.Ok(new
+        //        {
+        //            StatusCode = responseBody.StatusCode,
+        //            message = responseBody.IsDynamicMessage
+        //                ? responseBody.Message
+        //                : LoadJson(responseBody.StatusCode),
+        //            data = responseBody.Data
+        //        });
+        //    }
+
+        //    return controller.BadRequest(new
+        //    {
+        //        StatusCode = responseBody.StatusCode,
+        //        message = responseBody.IsDynamicMessage
+        //            ? responseBody.Message
+        //            : LoadJson(responseBody.StatusCode),
+        //        data = responseBody.Data
+        //    });
+        //}
 
         public class FileCommonResponse : CommonResponse
         {

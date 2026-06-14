@@ -8,6 +8,7 @@ using NexusCore.Common;
 using NexusCore.Controllers;
 using NexusCore.Model;
 using NexusCore.Services.Interfaces;
+using Org.BouncyCastle.Asn1.Ocsp;
 using static NexusCore.Model.CommonResponseClass;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -37,10 +38,12 @@ namespace NexusCore.Controllers
                 setTokenCookie(data.Data.refreshToken);
             }
             return commonResponseClass.ReturnResponce(data.IsSucess, data);
+
         }
 
         protected void setTokenCookie(string refreshToken)
         {
+
             var cookieOptions = new CookieOptions
             {
                 HttpOnly = true,

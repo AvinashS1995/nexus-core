@@ -155,3 +155,5 @@ obj/
 # User files
 *.user
 *.suo
+
+appsettings.Development.json

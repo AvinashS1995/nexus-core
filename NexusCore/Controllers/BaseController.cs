@@ -17,19 +17,21 @@ namespace NexusCore.Controllers
     public class BaseController : Controller
     {
         protected IConfiguration config;
-        protected CommonResponseClass commonResponseClass;
+        protected readonly CommonResponseClass commonResponseClass = new();
         protected string _logedInEmpNo { get { return GetLogedInEmpNo(); } }
-
-        public BaseController(IConfiguration _config, ICommonService _commonService)
-        {
-            config = _config;
-            commonResponseClass = new CommonResponseClass();
-        }
+        //protected readonly ICommonService? _commonService;
 
         public BaseController(IConfiguration config)
         {
             this.config = config;
         }
+
+        //public BaseController(IConfiguration _config, ICommonService _commonService)
+        //{
+        //    config = _config;
+        //    commonResponseClass = new CommonResponseClass();
+        //}
+
 
         protected string ipAddress()
         {

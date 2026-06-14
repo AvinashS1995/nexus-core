@@ -30,7 +30,8 @@ namespace NexusCore.Common
                         {
                             StatusCode = (int)businessCode,
                             Message = ErrorMessages.GetMessage(businessCode),
-                            Error = errorFeature.Error.Message
+                            Error = errorFeature.Error.Message,
+                            StackTrace = errorFeature.Error.StackTrace
                         };
 
                         await context.Response.WriteAsync(

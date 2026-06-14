@@ -51,6 +51,9 @@ builder.Services.AddScoped<DbContext>(sp =>
     var writeConnection = config.GetConnectionString("DefaultConnection");
     var readConnection = config.GetConnectionString("ReadConnection");
 
+    Console.WriteLine($"Write DB = {writeConnection}");
+    Console.WriteLine($"Read DB = {readConnection}");
+
     return new DbContext(writeConnection, readConnection);
 });
 
